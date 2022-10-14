@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+void bubblesort(int arr[], int size)
+{
+    int i,j;
+    for(i=0;i< size-1 ; i++)
+     for(j=0;j< size-i-1;j++)
+     if(arr[j]>arr[j+1])
+     {
+     int temp = arr[j];
+     arr[j]= arr[j+1];
+     arr[j+1]=temp;
+     }
+printf("After Sorting : ");
+for(i=0;i< size;i++)
+
+{
+printf("%d  ",arr[i]);
+
+}
+ printf("\n");   
+     
+}
+int main ()
+{
+    int arr[] = {12,4,65,33,6,43};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    bubblesort(arr,size);
+    return 0;
+}
+
+//Output : After Sorting : 4  6  12  33  43  65 
