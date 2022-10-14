@@ -31,33 +31,3 @@ int main ()
 
 //Output : After Sorting : 4  6  12  33  43  65 
 
-#include<stdio.h>
-int main ()
-{
-    int arr[] = {12,4,65,33,6,43};
-    int size = sizeof(arr)/sizeof(arr[0]);
-    selectionsort(arr , size);
-    return 0;
-}
-
-void selectionsort(arr,size)
-int i,j,min_idx;
-for(i=0 ; i< size-1 ; i++)
-{
-    min_idx = i;
-    for(j=i+1,j< size, j++)
-    {
-    if(arr[j] < arr[min_idx])
-    mid_idx = j;
-    }
-    if(min_idx != i)
-    int tmp = j;
-    j = j+i;
-    j+i = temp;
-    for(i=0,i<size,i++)
-    {
-    printf("After sorting : ")
-    printf("%d",arr[i]);
-    print("\n");
-    }
-}
