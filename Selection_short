@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main ()
+{
+	int arr[] = {12,4,65,33,6,43};
+	int size = sizeof(arr)/sizeof(arr[0]);
+	printf("After sorting :  ");
+	int i,j,min_inx;
+ 	for(i=0;i< size -1;i++)
+ 	{
+ 		int min_idx = i;
+ 		for(j =i+1 ; j < size ; j++ )
+ 		 if (arr[j] < arr[min_idx])
+ 		  min_idx = j;
+ 		  int temp = arr[j];
+ 		  arr[j]=arr[j+1];
+ 		  arr[j+1]=temp;
+	 }
+	for(i=0;i<size;i++)
+	{
+	printf("%d",arr[i]);
+	printf (" ");
+	}
+	
+	return 0;
+}
+
+//Output : After sorting :  12 4 65 33 6 43
