@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{    
+	int arr[10],x,i,size,count = 0;
+	printf("Enter the size : ");
+	scanf("%d",&size);
+	printf("Enter the elements : ");
+	printf("\n");
+	for(i=0;i<size;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	
+	printf("Enter the number : ");
+	scanf("%d",&x);
+	for(i=0;i<size;i++)
+	{
+	 if (arr[i] != x)
+	 count = count+1;
+    }
+	if (count == size) 
+	printf("Element not found");
+	else
+	printf("Element  found");
+	return 0;
+	
+}
