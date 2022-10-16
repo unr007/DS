@@ -1,0 +1,32 @@
+#include<stdio.h>
+int brysrh(int arr[],int l,int h, int x)
+{
+	if(h>=l)
+	{
+		int mid = (h+l)/2;
+		if(arr[mid]==x)
+		{
+		return mid;	
+		}
+		if(arr[mid]>x)
+		{
+			h = mid-1;
+			return brysrh(arr,0,h,x);
+		}
+		return brysrh(arr,mid+1,h,x);
+	}
+	return -1;
+}
+int main()
+{
+	int arr[]={22,44,5,64,1,13,67};
+	int size = sizeof(arr)/sizeof(arr[0]);
+    int data = 7;
+    int result = brysrh(arr,0,size-1,data);
+    if(result == -1)
+    {
+    printf("Data not found");	
+	}
+}
+
+//output : Data not found
